@@ -1,0 +1,40 @@
+GET http://localhost:3000/states/
+Content-Type: application/json   
+//API 1
+
+
+###
+GET http://localhost:3000/states/1/
+Content-Type: application/json
+//API2
+###
+POST http://localhost:3000/districts/
+Content-Type: application/json
+
+//API 3
+###
+GET http://localhost:3000/districts/1/
+Content-Type: application/json
+
+//API 4
+###
+DELETE  http://localhost:3000/districts/1/
+Content-Type: application/json
+//API 5
+###
+PUT http://localhost:3000/districts/1/
+Content-Type: application/json
+//updated
+//API 6
+
+###
+GET http://localhost:3000/states/1/stats/
+Content-Type: application/json;
+
+///API 7
+
+
+###
+GET http://localhost:3000/districts/1/details/
+Content-Type: application/json;
+
