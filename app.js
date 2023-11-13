@@ -37,7 +37,7 @@ const convertDbObjectToResponseObject = (dbObject) => {
     districtName: dbObject.district_name,
     stateId: dbObject.state_id,
     cases: dbObject.cases,
-    cured: dbObject.curved,
+    cured: dbObject.cured,
     active: dbObject.active,
     deaths: dbObject.deaths,
   };
@@ -106,7 +106,7 @@ app.delete("/districts/:districtId/", async (request, response) => {
 });
 //API 6
 app.put("/districts/:districtId/", async (request, response) => {
-  const { districtName, stateId, cases, curved, active, deaths } = request.body;
+  const { districtName, stateId, cases, cured, active, deaths } = request.body;
   const { districtId } = request.params;
   const updateDistrictQuery = `
   UPDATE
@@ -115,7 +115,7 @@ app.put("/districts/:districtId/", async (request, response) => {
     district_name = '${districtName}',
     state_id = ${stateId},
    cases = ${cases},
-   curved=${curved},
+   cured=${cured},
    active=${active},
    deaths=${deaths}
   WHERE
